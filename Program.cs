@@ -68,12 +68,31 @@ Console.WriteLine();
 //Predicate
 Predicate<double> pred = del.IsPositive;
 
+bool tan = pred(-50);
+
+if (tan == true)
+{
+    Console.WriteLine("Its a Positive number");
+}
+else
+{
+    Console.WriteLine("Its a Negative number");
+}
+Console.WriteLine();
+
+  //anothher thing you can do with predicate
 List<double> numbers = new List<double>() { 2, 0, -5, 4, -8, 9 };
 
 List<double> positiveNumbers = new List<double>(numbers.FindAll(pred));
 Console.WriteLine("List of Positive numbers");
 foreach (double number in positiveNumbers)
     { Console.WriteLine(number); }
+
+Console.WriteLine();
+
+
+
+
 
 
 
